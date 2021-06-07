@@ -6,7 +6,7 @@
 
 <body>
 
-<form method="get" action="" onsubmit="return false;">
+<form method="get" action="j-cropsey.github.io" onsubmit="return false;">
 
 	<div style="float:left">Dryer Voltage</div>
 	<div style="margin-left:37%"> Voltage:
@@ -40,9 +40,9 @@
 	<label for="stainlesssteel"> Stainless Steel</label></div>
 	
 	<input type="reset" name="g">
-	<input type="button" value="Save (uses cookies)" onclick="setCookie('moKo',getFormString(this.form,'true')676789);">
-	<input type="button" value="Recover" onclick="recoverInputs(this.form,retrieveCookie('moKo'),true);">
-	
+	<input type="button" value="Save" onclick="setCookie('formdata',getFormString(this.form,true));">
+	<input type="button" value="Recover" onclick="recoverInputs(this.form,retrieveCookie('formdata'),true);">
+
 </form>
 
 <script>
