@@ -1427,9 +1427,9 @@
 -->
 <hr>
 	<center>
-<input type="reset" class="button button1" style="width:32.5%" name="g">
-<input type="button" class="button button1" style="width:32.5%" value="Save" onclick="setCookie('formdata',getFormString(this.form,true), 1209600);">
-<input type="button" class="button button1" style="width:32.5%" value="Recover" onclick="recoverInputs(this.form,retrieveCookie('formdata'),true);">
+<input type="reset" class="button-cookie" style="width:32.5%" name="g">
+<input type="button" class="button-cookie" style="width:32.5%" value="Save" onclick="setCookie('formdata',getFormString(this.form,true), 1209600);">
+<input type="button" class="button-cookie" style="width:32.5%" value="Recover" onclick="recoverInputs(this.form,retrieveCookie('formdata'),true);">
 	</center>
 <hr>
 <br>
@@ -1592,6 +1592,27 @@ resize: vertical;
     font-size: 12px;
     line-height: 2;
  }
+	
+.button-cookie{
+     width: 100%;
+     position:relative;
+ }
+
+.button-cookie:after{
+    content:  attr(value);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;    
+    width: 100%;
+    background: rgba(21,84,131,1);
+    color: white;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 2;
+ }
+/*
 .button{
   background-color: rgba(21,84,131,1);
   border-color: rgba(21,84,131,1);
@@ -1607,7 +1628,7 @@ resize: vertical;
 }
 
 .button1 {border-radius: 2px;}
-	
+*/	
 </style>
 
 
