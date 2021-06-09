@@ -1611,11 +1611,30 @@ button,
   cursor: pointer;
 }
 	
-input[type="checkbox"] { position: absolute; opacity: 0; z-index: -1; }
-input[type="checkbox"]{ font: 16pt sans-serif; color: #000; }
-input[type="checkbox"]:before { font: 16pt FontAwesome; content: '\00f096'; display: inline-block; width: 16pt; padding: 2px 0 0 3px; margin-right: 0.5em; }
-input[type="checkbox"]:checked:before { content: '\00f046'; }
+input[type=checkbox]:focus
+{
+    outline: 1px solid rgba(0, 0, 0, 0.2);
+}
 
+input[type=checkbox]
+{
+    background-color: #DDD;
+    border-radius: 2px;
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    width: 17px;
+    height: 17px;
+    cursor: pointer;
+    position: relative;
+    top: 5px;
+}
+
+input[type=checkbox]:checked
+{
+    background-color: #409fd6;
+    background: #409fd6 url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 3px 3px no-repeat;
+}
 		
 </style>
 
