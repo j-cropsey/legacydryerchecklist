@@ -27,7 +27,7 @@
 
 <div style="float:left">Dryer Voltage</div>
 <div style="margin-left:39%"> Voltage:
-<input type ="text" id="dryervoltage" name="dryervoltage" size="8%" placeholder="Volts">&nbsp&nbsp
+<input type="text" id="dryervoltage" name="dryervoltage" size="8%" placeholder="Volts">&nbsp&nbsp
 <input type="checkbox" id="3phase" name="3phase" value="3phase">
 <label for="3phase">3Phase</label>&nbsp&nbsp
 <input type="checkbox" id="1phase" name="1phase" value="1phase">
@@ -1438,6 +1438,7 @@
 </div>
 </form>
 <script>
+.click(img_pathUrl(){$(this).remove();});
 function img_pathUrl(input){
         $('#img_url')[0].src = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
     }
