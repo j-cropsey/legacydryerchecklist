@@ -1610,6 +1610,12 @@ button,
   margin: 0;
   cursor: pointer;
 }
+	
+input[type="checkbox"] { position: absolute; opacity: 0; z-index: -1; }
+input[type="checkbox"]+span { font: 16pt sans-serif; color: #000; }
+input[type="checkbox"]+span:before { font: 16pt FontAwesome; content: '\00f096'; display: inline-block; width: 16pt; padding: 2px 0 0 3px; margin-right: 0.5em; }
+input[type="checkbox"]:checked+span:before { content: '\00f046'; }
+input[type="checkbox"]:focus+span:before { outline: 1px dotted #aaa; }
 /*
 .button{
   background-color: rgba(21,84,131,1);
