@@ -1432,7 +1432,6 @@
 <input type="button" class="button-cookie" style="width:32.3%" value="Save" onclick="setCookie('formdata',getFormString(this.form,true), 1209600);">
 <input type="button" class="button-cookie" style="width:32.3%" value="Recover" onclick="recoverInputs(this.form,retrieveCookie('formdata'),true);">
 </center>
-
 <br>
 	
 </div>
@@ -1440,11 +1439,16 @@
 	
 <form onsubmit="download(this['name'].value, this['text'].value)">
   <input type="text" name="name" value="test.txt">
-  <input type="text" name="text" value="retrieveCookie('formdata')">
+  <input type="text" name="text" value="showCookies()">
   <input type="submit" value="Download">
 </form>
 	
 <script>
+function showCookies() {
+  const output = document.getElementById('formdata')
+  output.textContent = '> ' + document.cookie
+}	
+	
 function download(filename, text) {
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
