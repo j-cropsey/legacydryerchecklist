@@ -1442,7 +1442,7 @@
 <script>
 var filename="serialnumberssd";
 var data="hello hello hihih";
-saveAs(filename, data) {
+function saveAs(filename, data) {
     var blob = new Blob([data], {type: 'text/csv'});
     if(window.navigator.msSaveOrOpenBlob) {
         window.navigator.msSaveBlob(blob, filename);
