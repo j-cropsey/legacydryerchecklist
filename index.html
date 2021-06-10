@@ -1429,7 +1429,7 @@
 <br>
 <center>
 <input type="reset"  class="button-cookie" style="width:32.3%" name="g">
-<input type="button" class="button-cookie" style="width:32.3%" value="Save" onclick="setCookie('formdata',getFormString(this.form,true), 1209600); fillsavefile();">
+<input type="button" class="button-cookie" style="width:32.3%" value="Save" onclick="setCookie('formdata',getFormString(this.form,true), 1209600);">
 <input type="button" class="button-cookie" style="width:32.3%" value="Recover" onclick="recoverInputs(this.form,retrieveCookie('formdata'),true);">
 </center>
 <br>
@@ -1442,7 +1442,7 @@
   <input type="text" name="text" id="text" size="1%">
   <input type="submit" value="Download">
 	
-  <input type="button" value="savefilebutton" onclick="dowload(inputs["serialnumberdryer"].value,document.cookie)">
+  <input type="button" value="savefilebutton" onclick="dowload(inputs["serialnumberdryer"].value, document.cookie)">
 </form>
 	
 <script>
