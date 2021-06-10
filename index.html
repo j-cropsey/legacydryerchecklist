@@ -15,7 +15,7 @@
 <p><label for="date">Date:</label>
 <input type="date" id="date" name="date" size="20%"></p>
 <p><label for="serialnumber">Serial Number: </label>
-<input type="text" id="serialnumbers" name="serialnumber" maxlength="7" size="13%" placeholder="2021###"></p>
+<input type="text" id="serialnumber" name="serialnumberdryer" maxlength="7" size="13%" placeholder="2021###"></p>
 <p><label for=:modelnumber">Model Number:</label>
 <input type="text" id="modelnumber" name="modelnumber" size="12%" placeholder="E###"></p>
 <p><label for="dealer">Dealer:</label>
@@ -1445,13 +1445,13 @@
 	
 <script>
 var inputs = document.getElementById("checklistform").elements;
-var serialnumberstring = inputs["serialnumber"];
+//var serialnumberstring = inputs["serialnumber"];
 //serialnumberstring = 'Values: '; 
 //serialnumberstring += inputs["serialnumber"]; 
 //serialnumberstring += '.txt';
 	
 $("#text")[0].value =document.cookie;
-$("#name")[0].value =inputs["serialnumber"];
+$("#name")[0].value =inputs["serialnumberdryer"];
 	
 function download(filename, text) {
   var element = document.createElement('a');
