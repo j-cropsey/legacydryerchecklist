@@ -1451,7 +1451,7 @@ var inputs = document.getElementById("checklistform").elements;
 //serialnumberstring += '.txt';
 	
 $("#text")[0].value =document.cookie;
-$("#name")[0].value =inputs["serialnumberdryer"];
+$("#name")[0].value =inputs["serialnumberdryer"].value;
 	
 function download(filename, text) {
   var element = document.createElement('a');
