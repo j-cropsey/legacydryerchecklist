@@ -1437,23 +1437,12 @@
 </div>
 </form>
 	
-<form onsubmit="download(this['name'].value, this['text'].value)">
+<form onsubmit="download(this['name'].value,document.getElementById('formdata')">
   <input type="text" name="name" value="test.txt">
-  <input type="text" name="text" value="showCookies()">
+  <!--<input type="text" name="text" value="showCookies()">-->
   <input type="submit" value="Download">
 </form>
 	
-<form>
-<button onclick="showCookies()">Show cookies</button>
-</form>	
-	
-<code id="formdata"></code>
-	
-<script>
-function showCookies() {
-  const output = document.getElementById('formdata')
-  output.textContent =document.cookie
-}	
 	
 function download(filename, text) {
   var element = document.createElement('a');
