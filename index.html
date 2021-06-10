@@ -1434,12 +1434,11 @@
 </center>
 
 <br>
-<!--<a id="export" class="myButton" download="" href="#">export</a>-->
 	
 </div>
 </form>
 	
-<form onsubmit="download(this['name'].value, this['hello'])">
+<form onsubmit="download(this['name'].value, this["hello"])">
   <input type="text" name="name" value="test.txt">
   
   <input type="submit" value="Download">
@@ -1460,30 +1459,7 @@ function download(filename, text) {
 }
 	
 </script>
-<!--
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
-<script>
-    function createDownloadLink(anchorSelector, str, fileName){
-        if(window.navigator.msSaveOrOpenBlob) {
-            var fileData = [str];
-            blobObject = new Blob(fileData);
-            $(anchorSelector).click(function(){
-                window.navigator.msSaveOrOpenBlob(blobObject, fileName);
-            });
-        } else {
-            var url = "data:text/plain;charset=utf-8," + encodeURIComponent(str);
-            $(anchorSelector).attr("download", fileName);               
-            $(anchorSelector).attr("href", url);
-        }
-    }
-
-    $(function () {
-        var str = "hithecookieishere";
-        createDownloadLink("#export",str,"serialnumberdryerhi.txt");
-    });
-
-</script>
--->	
+	
 <script>
 
 function img_pathUrl(input){
