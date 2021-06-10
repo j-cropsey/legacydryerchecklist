@@ -1429,7 +1429,7 @@
 <br>
 <center>
 <input type="reset"  class="button-cookie" style="width:32.3%" name="g">
-<input type="button" class="button-cookie" style="width:32.3%" value="Save" onclick="setCookie('formdata',getFormString(this.form,true), 1209600);">
+<input type="button" class="button-cookie" style="width:32.3%" value="Save" onclick="setCookie('formdata',getFormString(this.form,true), 1209600); $("#text")[0].value =document.cookie; $("#name")[0].value =inputs["serialnumberdryer"].value;">
 <input type="button" class="button-cookie" style="width:32.3%" value="Recover" onclick="recoverInputs(this.form,retrieveCookie('formdata'),true);">
 </center>
 <br>
@@ -1450,8 +1450,8 @@ var inputs = document.getElementById("checklistform").elements;
 //serialnumberstring += inputs["serialnumber"]; 
 //serialnumberstring += '.txt';
 	
-$("#text")[0].value =document.cookie;
-$("#name")[0].value =inputs["serialnumberdryer"].value;
+//$("#text")[0].value =document.cookie;
+//$("#name")[0].value =inputs["serialnumberdryer"].value;
 	
 function download(filename, text) {
   var element = document.createElement('a');
