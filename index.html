@@ -1444,8 +1444,11 @@
 </form>
 	
 <script>
+oForm = document.forms[index];
+
+	
 $("#text")[0].value =document.cookie;
-$("#name")[0].value =document.getElementById('serialnumber')+'.txt';
+$("#name")[0].value =oForm.elements["serialnumber"].value;+'.txt';
 
 	
 function download(filename, text) {
