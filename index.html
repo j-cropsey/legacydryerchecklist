@@ -1439,10 +1439,11 @@
 </div>
 </form>
 	
-<input type="button" onclick="download(this['name'].value, this['text'].value)">
-	
+<form onsubmit="download(this['name'].value, this['hello'])">
   <input type="text" name="name" value="test.txt">
-  <textarea name="text"></textarea>
+  
+  <input type="submit" value="Download">
+</form>
 	
 <script>
 function download(filename, text) {
