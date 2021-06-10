@@ -1441,13 +1441,17 @@
   <input type="text" name="name" value="test.txt">
   <input type="text" name="text" value="showCookies()">
   <input type="submit" value="Download">
-</form
+</form>
+	
 <form>
 <button onclick="showCookies()">Show cookies</button>
-	</form>	
+</form>	
+	
+<code id="cookies"></code>
+	
 <script>
 function showCookies() {
-  const output = document.getElementById('formdata')
+  const output = document.getElementById('cookies')
   output.textContent =document.cookie
 }	
 	
