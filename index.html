@@ -1442,22 +1442,24 @@
   <input type="text" name="text" id="text" size="1%">
   <input type="submit" value="Download">
 	
-  <input type="button" value="savefilebutton" onclick="download(inputs["serialnumberdryer"].value, document.cookie);">
+  <input type="button" value="savefilebutton" onclick="download();">
 </form>
 	
 <script>
 var inputs = document.getElementById("checklistform").elements;
 
-	function fillsavefile(){
-$("#text")[0].value =document.cookie;
-$("#name")[0].value =inputs["serialnumberdryer"].value;
-	}
+//	function fillsavefile(){
+//$("#text")[0].value =document.cookie;
+//$("#name")[0].value =inputs["serialnumberdryer"].value;
+//	}
 	
 function download(filename, text) {
+  var filename= inputs["serialnumberdryer"].value;
+  var text="document.cookie";
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
   element.setAttribute('download', filename);
-
+  
   element.style.display = 'none';
   document.body.appendChild(element);
 
