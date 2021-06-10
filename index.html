@@ -1435,22 +1435,11 @@
 <br>
 	
 </div>
-	<input type="button" value="savefilebutton" onclick="download();">
+	<center><type="button" value="savefilebutton" onclick="download();"></center>
 </form>
-
-<!--<form onsubmit="download(this['name'].value,this['text'].value)">
-  <input type="text" name="name" id="name" size="1%">
-  <input type="text" name="text" id="text" size="1%">
-  <input type="submit" value="Download">
-</form>-->
 	
 <script>
 var inputs = document.getElementById("checklistform").elements;
-
-//	function fillsavefile(){
-//$("#text")[0].value =document.cookie;
-//$("#name")[0].value =inputs["serialnumberdryer"].value;
-//	}
 	
 function download(filename, text) {
   var filename= inputs["serialnumberdryer"].value;
@@ -1466,10 +1455,6 @@ function download(filename, text) {
 
   document.body.removeChild(element);
 }
-	
-</script>
-	
-<script>
 
 function img_pathUrl(input){
         $('#img_url')[0].src = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
