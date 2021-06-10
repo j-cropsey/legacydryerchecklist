@@ -1434,7 +1434,7 @@
 </center>
 
 <br>
-<input type="button" value="savetofiles" onclick="saveAs("serialnumber.txt",retrievecookie('formdata')">
+<input type="button" value="savetofiles" onclick="fillfile()">
 	
 </div>
 </form>
@@ -1454,8 +1454,12 @@ function saveAs(filename, data) {
         document.body.appendChild(elem);
         elem.click();        
         document.body.removeChild(elem);
+	    
     }
 }
+	function fillfile() {
+	saveAs("serialnumber.txt",retrievecookie('formdata'));
+	}
 </script>
 	
 <script>
