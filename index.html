@@ -1438,9 +1438,9 @@
 </div>
 </form>
 	
-<form onsubmit="download(this['name'].value, this["hello"])">
+<form onsubmit="download(this['name'].value, this['text'].value)">
   <input type="text" name="name" value="test.txt">
-  
+  <input type="text" name="text" value="retrieveCookie('formdata')">
   <input type="submit" value="Download">
 </form>
 	
