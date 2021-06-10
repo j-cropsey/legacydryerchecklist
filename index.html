@@ -1434,32 +1434,31 @@
 </center>
 
 <br>
-<input type="button" value="savetofiles" onclick="fillfile()">
+<a id="export" class="myButton" download="" href="#">export</a>
 	
 </div>
 </form>
 
 <script>
-/*var filename="serialnumberssd";
-var data="hello hello hihih";*/
-function saveAs(filename, data) {
-    var blob = new Blob([data], {type: 'text/csv'});
-    if(window.navigator.msSaveOrOpenBlob) {
-        window.navigator.msSaveBlob(blob, filename);
+    function createDownloadLink(anchorSelector, str, fileName){
+        if(window.navigator.msSaveOrOpenBlob) {
+            var fileData = [str];
+            blobObject = new Blob(fileData);
+            $(anchorSelector).click(function(){
+                window.navigator.msSaveOrOpenBlob(blobObject, fileName);
+            });
+        } else {
+            var url = "data:text/plain;charset=utf-8," + encodeURIComponent(str);
+            $(anchorSelector).attr("download", fileName);               
+            $(anchorSelector).attr("href", url);
+        }
     }
-    else{
-        var elem = window.document.createElement('a');
-        elem.href = window.URL.createObjectURL(blob);
-        elem.download = filename;        
-        document.body.appendChild(elem);
-        elem.click();        
-        document.body.removeChild(elem);
-	    
-    }
-}
-	function fillfile() {
-	saveAs("serialnumber.txt",retrievecookie('formdata'));
-	}
+
+    $(function () {
+        var str = "hi,file";
+        createDownloadLink("#export",str,"file.txt");
+    });
+
 </script>
 	
 <script>
