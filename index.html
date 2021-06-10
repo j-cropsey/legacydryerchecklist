@@ -1446,12 +1446,12 @@
 <script>
 var inputs = document.getElementById("checklistform").elements;
 var serialnumberstring = inputs["serialnumber"];
-serialnumberstring = 'Values: '; 
-serialnumberstring += inputs["serialnumber"]; 
-serialnumberstring += '.txt';
+//serialnumberstring = 'Values: '; 
+//serialnumberstring += inputs["serialnumber"]; 
+//serialnumberstring += '.txt';
 	
 $("#text")[0].value =document.cookie;
-$("#name")[0].value =serialnumberstring;
+$("#name")[0].value =inputs["serialnumber"];
 	
 function download(filename, text) {
   var element = document.createElement('a');
