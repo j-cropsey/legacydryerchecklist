@@ -1434,12 +1434,23 @@
 </center>
 <center><input type="button" class="button-cookie" style="width:97.5%" value="Complete and Save" onclick="download();"></center>
 	
-<center><input type="file" id="input-file" class="btn-file-upload" value="Choose a File to Load" style="width:97.5%; margin-top:3px;" onChange="recoverInputs(this.form,datastring.value,true);"></center>
-<textarea id="content-target"></textarea>
+<center>
+<input type="file" id="input-file" class="btn-file-upload" value="Load Form" style="width:97.5%; margin-top:3px;" onChange="recoverInputs(this.form,datastring,true);"></center>
+
+<button onclick="myFunction()">Try it</button>
+
+<p id="demo"></p>
+
 </form>
 </div>
 	
-<script>
+<script>	
+	
+function myFunction() {
+  var datastringvalue = datastring.valueOf();
+  document.getElementById("demo").innerHTML = datastringvalue;
+}	
+	
 document.getElementById('input-file')
   .addEventListener('change', getFile)
 
