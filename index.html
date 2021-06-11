@@ -1447,7 +1447,7 @@ function getFile(event) {
 	var datastring;
 	const input = event.target
   if ('files' in input && input.files.length > 0) {
-	  placeFileContent(document.getElementById('content-target'),input.files[0])
+	  placeFileContent(datastring,input.files[0])
 	  
   }
 }
