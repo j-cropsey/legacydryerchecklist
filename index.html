@@ -1435,7 +1435,7 @@
 <center><input type="button" class="button-cookie" style="width:97.5%" value="Complete and Save" onclick="download();"></center>
 	
 <center><input type="file" id="input-file" class="btn-file-upload" value="Choose a File to Load" style="width:97.5%; margin-top:3px;" onChange="recoverInputs(this.form,datastring,true);"></center>
-	
+<textarea id="content-target"></textarea>
 </form>
 </div>
 	
@@ -1447,7 +1447,7 @@ function getFile(event) {
 	var datastring;
 	const input = event.target
   if ('files' in input && input.files.length > 0) {
-	  placeFileContent(datastring,input.files[0])
+	  placeFileContent(document.getElementById('content-target'),input.files[0])
 	  
   }
 }
