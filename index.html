@@ -1472,7 +1472,7 @@ var inputs = document.getElementById("checklistform").elements;
 function download(filename, text) {
   var filename= inputs["serialnumberdryer"].value;
   var text=document.cookie;
-  text.replace("formdata=", "");
+  alert(text.split("=").pop());
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
   element.setAttribute('download', filename);
