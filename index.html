@@ -1625,8 +1625,8 @@ input[type=checkbox]{
 input[type=checkbox]:checked
 {
     background-color: /*rgba(21,84,131,1)*/black;
-    background: /*rgba(21,84,131,1)*/black /*url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 2.3px 2.3px no-repeat;
-*/}
+    background: /*rgba(21,84,131,1)*/black /*url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 2.3px 2.3px no-repeat;*/
+}
 		
 </style>
 
@@ -1658,7 +1658,6 @@ function readFileContent(file) {
   })
 }
 	
-	
 function retrieveCookie( cookieName ) {
 	/* retrieved in the format
 	cookieName4=value; cookieName3=value; cookieName2=value; cookieName1=value
@@ -1686,9 +1685,7 @@ function setCookie( cookieName, cookieValue, lifeTime, path, domain, isSecure ) 
 	if( lifeTime < 0 ) { if( typeof( retrieveCookie( cookieName ) ) == "string" ) { return false; } return true; }
 	if( typeof( retrieveCookie( cookieName ) ) == "string" ) { return true; } return false;
 }
-</script>
 
-<script>
 var FS_INCLUDE_NAMES = 0, FS_EXCLUDE_NAMES = 1, FS_INCLUDE_IDS = 2, FS_EXCLUDE_IDS = 3, FS_INCLUDE_CLASSES = 4, FS_EXCLUDE_CLASSES = 5;
 
 function getFormString( formRef, oAndPass, oTypes, oNames ) {
