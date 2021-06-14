@@ -1438,7 +1438,7 @@
 	
 <center>
 <input type="file" id="input-file" class="btn-file-upload" value="Load Form" style="width:97.5%; margin-top:3px;"></center>
-<textarea value="document.getElementById('stringfortest').value" id="content-target"></textarea>
+<textarea id="content-target"></textarea>
 <input type="button" value="load" onclick="recoverInputs(this.form,retrieveCookie('stringfortest'),true);">
 
 	
@@ -1490,8 +1490,9 @@ var inputs = document.getElementById("checklistform").elements;
 	
 function download(filename, text) {
   var filename= inputs["serialnumberdryer"].value;
-  var textbefore=document.cookie;
-  text= textbefore.split("=").pop();
+	var text=document.cookie;
+ // var textbefore=document.cookie;
+  //text= textbefore.split("=").pop();
   var element = document.createElement('a');
   element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
   element.setAttribute('download', filename);
