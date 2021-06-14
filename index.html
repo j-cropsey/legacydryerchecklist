@@ -1689,7 +1689,7 @@ function retrieveCookie( cookieName ) {
 		var oneCookie = cookieJar[x].split( "=" );
 		if( oneCookie[0] == escape( cookieName ) ) { return oneCookie[1] ? unescape( oneCookie[1] ) : ''; }
 	}
-	return;
+	return null;
 }
 
 function setCookie( cookieName, cookieValue, lifeTime, path, domain, isSecure ) {
