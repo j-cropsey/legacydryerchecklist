@@ -1431,6 +1431,7 @@
 <input type="reset"  class="button-cookie" style="width:32.3%" name="g">
 <input type="button" class="button-cookie" style="width:32.3%" value="Save" onclick="setCookie('formdata',getFormString(this.form,true), 1209600);">
 <input type="button" class="button-cookie" style="width:32.3%" value="Recover" onclick="recoverInputs(this.form,retrieveCookie('formdata'),true);">
+
 </center>
 <center><input type="button" class="button-cookie" style="width:97.5%" value="Complete and Save" onclick="download();"></center>
 	
@@ -1443,6 +1444,11 @@
 </div>
 	
 <script>
+function showcookie()
+	{
+	valueOf(retrieveCookie('formdata'));
+	}
+	
 /*document.getElementById('input-file')
 const reader = new FileReader()
 reader.onload = event => console.log(event.target.result) // desired file content
