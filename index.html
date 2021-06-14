@@ -1439,22 +1439,18 @@
 <input type="file" id="input-file" class="btn-file-upload" value="Load Form" style="width:97.5%; margin-top:3px;"></center>
 <!--<textarea id="content-target"></textarea>-->
 <input type="button" value="load" onclick="recoverInputs(this.form,readFileContent(input.files[0]),true);">
-<!--<input type="button" value="showcookie" onclick="showcookie();">-->
+
 </form>
 </div>
 	
 <script>
-/*function showcookie()
-	{
-	placeFileContent(document.getElementByID('content-target'),input.files[0]);
-	}
 	
 document.getElementById('input-file')
 const reader = new FileReader()
 reader.onload = event => console.log(event.target.result) // desired file content
 reader.onerror = error => reject(error)
 reader.readAsText(file)
-*/
+
 	
 document.getElementById('input-file')
   .addEventListener('change', getFile)
