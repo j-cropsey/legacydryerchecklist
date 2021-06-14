@@ -19,7 +19,7 @@
 <p><label for=:modelnumber">Model Number:</label>
 <input type="text" id="modelnumber" name="modelnumber" size="12%" placeholder="E###"></p>
 <p><label for="dealer">Dealer:</label>
-<input type="text" id="dealer" name="dealer" size="20%" placeholder="Dealer"></p>
+<input type="text" id="dealer" name="dealer" size="16%" placeholder="Dealer"></p>
 
 <hr>
 <b>Dryer Build Check </b>
@@ -1431,31 +1431,30 @@
 <input type="reset"  class="button-cookie" style="width:32.3%" name="g">
 <input type="button" class="button-cookie" style="width:32.3%" value="Save" onclick="setCookie('formdata',getFormString(this.form,true), 1209600);">
 <input type="button" class="button-cookie" style="width:32.3%" value="Recover" onclick="recoverInputs(this.form,retrieveCookie('formdata'),true);">
-
 </center>
 <center><input type="button" class="button-cookie" style="width:97.5%" value="Complete and Save" onclick="download();"></center>
 	
 <center>
 <input type="file" id="input-file" class="btn-file-upload" value="Load Form" style="width:97.5%; margin-top:3px;"></center>
 <textarea id="content-target"></textarea>
-
+<input type="button" value="load" onclick="recoverInputs(this.form,loadsaves,true);">
 
 </form>
 </div>
 	
 <script>
-	
-document.getElementById('input-file')
+/*document.getElementById('input-file')
 const reader = new FileReader()
 reader.onload = event => console.log(event.target.result) // desired file content
 reader.onerror = error => reject(error)
 reader.readAsText(file)
-
+*/
 	
 document.getElementById('input-file')
   .addEventListener('change', getFile)
 
 function getFile(event) {
+	var datastring;
 	const input = event.target
   if ('files' in input && input.files.length > 0) {
 	  placeFileContent(document.getElementById('content-target'),input.files[0])
