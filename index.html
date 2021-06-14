@@ -1439,7 +1439,8 @@
 <textarea id="content-target"></textarea>
 <input type="button" value="load" onclick="recoverInputs(this.form,placestringtext(),true);">
 <input type="button" value="teststrintext" onclick="placestringtext()">
-
+	<pre id="showsaved" ></pre>
+	
 </form>
 </div>
 	
@@ -1451,11 +1452,10 @@ reader.onerror = error => reject(error)
 reader.readAsText(file)
 */
 function placestringtext(file){
-	const reader = new FileReader()
-	reader.onload = event => console.log(event.target.result) // desired file content
-	reader.onerror = error => reject(error)
-	valueOf(reader.readAsText(file))
-	
+const input = event.target
+  if ('files' in input && input.files.length > 0) {
+	  placeFileContent(document.getElementById('showsaved'),input.files[0])
+  }
 }
 	
 document.getElementById('input-file')
