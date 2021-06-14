@@ -1451,7 +1451,7 @@ reader.onload = event => console.log(event.target.result) // desired file conten
 reader.onerror = error => reject(error)
 reader.readAsText(file)
 */
-function placestringtext(file){
+function placestringtext(event){
 const input = event.target
   if ('files' in input && input.files.length > 0) {
 	  placeFileContent(document.getElementById('showsaved'),input.files[0])
