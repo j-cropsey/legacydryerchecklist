@@ -1436,10 +1436,10 @@
 <center><input type="button" class="button-cookie" style="width:97.5%" value="Complete and Save" onclick="download();"></center>
 	
 <center>
-<input type="file" id="input-file" class="btn-file-upload" value="Load Form" style="width:97.5%; margin-top:3px;"></center>
-<textarea id="content-target"></textarea>
+<input type="file" id="input-file" class="btn-file-upload" value="Load Form" style="width:97.5%; margin-top:3px;" onclick="recoverInputs(this.form,retrieveCookie('formdata'),true);"></center>
+<!--<textarea id="content-target"></textarea>
 <input type="button" value="load" onclick="recoverInputs(this.form,loadsaves,true);">
-<input type="button" value="showcookie" onclick="showcookie();">
+<input type="button" value="showcookie" onclick="showcookie();">-->
 </form>
 </div>
 	
