@@ -1413,7 +1413,8 @@
 </center>
 -->
 <script>
-	var stringfortest = document.getElementById('formdata').value;
+	//var stringfortest = document.getElementById('formdata').value;
+	var stringfortest = document.cookie;
 </script>
 
 <center>
@@ -1449,7 +1450,7 @@ reader.readAsText(file)
 //}
 	
 document.getElementById('input-file')
-  .addEventListener('change', getFile)
+  .addEventListener('change', getFile) 
 
 function getFile(event) {
 	var datastring;
