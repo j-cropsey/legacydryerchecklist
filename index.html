@@ -1430,7 +1430,7 @@
 <!--<textarea id="content-target"></textarea>-->
 <input type="button" value="load" onclick="recoverInputs(this.form,textdownload,true);">
 <input type="button" value="load formdata to console" onclick="console.log(retrieveCookie('formdata'));">
-<input type="button" value="read file to console" onclick="console.log(textFromFileLoaded);">
+<input type="button" value="read file to console" onclick="console.log(textFromFileLoaded.replace(/%2C/g,","));">
 </form>
 </div>
 	
