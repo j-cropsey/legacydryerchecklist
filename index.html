@@ -1430,12 +1430,12 @@
 <!--<textarea id="content-target"></textarea>-->
 <input type="button" value="load" onclick="recoverInputs(this.form,cookiefromfile,true);">
 <input type="button" value="load formdata to console" onclick="console.log(retrieveCookie('formdata'));">
-<input type="button" value="read file to console" onclick="console.log(textFromFileLoaded.replace(/%2C/g,","));">
+<input type="button" value="read file to console" onclick="console.log(textFromFileLoaded);">
 </form>
 </div>
 	
 <script>
-var cookiefromfile = textFromFileLoaded.replace(/%2C/g,",")
+var cookiefromfile = textFromFileLoaded
 //var cookiefromfile = document.getElementById('content-target')
 //var stringtyped = ",e599,custom,4,,,,1,,1,1,,,,,,,,1,,1,,1,,,,,,,,,,,,1,,1,,,,,,,,1,,,1,,,1,,,,,,,,,,,,,,,,,,,,,,1,,,,1,,,1,,,,,,1,dff,,,,,,,,,,,,,,,1,,1,,,,,,,,,,,,,,,,,,,,,,,1,,1,1,1,,,,,,,,,,,,,,,,,,,,,,,,1,,1,,1,,,,1,,1,,1,,,,,,,,,,,,,,,,1,,,,1,,1,,1,,,,,,,,,,,,,,,,,1,,1,,,,,,,,,,,,,,,,,,,,,,,,,,1,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,1,1,,,,,,,,,,,,,,,1,,1,,,,sdfsf,,,,,,,,,,,,,,,,fdsfdsf,,,,,,sfds,,,,,,,1,,,1,,,,,,,,,1,,,,1,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,sddsfdfdffff,,,,";	
 	
