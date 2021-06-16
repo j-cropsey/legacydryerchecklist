@@ -1428,7 +1428,8 @@
 <input type="file" id="input-file" class="btn-file-upload" value="Load Form" style="width:97.5%; margin-top:3px;"></center>
 <textarea id="content-target"></textarea>
 <input type="button" value="load" onclick="recoverInputs(this.form,stringtyped,true);">
-<input type="button" value="load" onclick="console.log(retrieveCookie('formdata'));">
+<input type="button" value="load formdata to console" onclick="console.log(retrieveCookie('formdata'));">
+<input type="button" value="load file cookie to console" onclick="console.log(retrieveCookie('formdata'));">
 </form>
 </div>
 	
@@ -1478,7 +1479,8 @@ var inputs = document.getElementById("checklistform").elements;
 	
 function download(filename, text) {
   var filename= inputs["serialnumberdryer"].value;
-	var text=document.cookie;
+	var text=retrieveCookie('formdata);
+	//var text=document.cookie;
  // var textbefore=document.cookie;
   //text= textbefore.split("=").pop();
   var element = document.createElement('a');
