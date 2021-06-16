@@ -1421,9 +1421,9 @@
 <center><input type="button" class="button-cookie" style="width:97.5%" value="Submit Quality Checklist" onclick="download();"></center>
 	
 <center>
-<input type="file" id="fileToLoad" class="btn-file-upload" value="Load Checklist From File" style="width:97.5%; margin-top:3px;" onchange="loadFileAsText()";></center>
+<input type="file" id="fileToLoad" class="btn-file-upload-load" value="Load Checklist From File" style="width:97.5%; margin-top:3px;" onchange="loadFileAsText()";></center>
 <!--<input type="button" value="initiate file read" onclick="loadFileAsText()">-->
-<center><input type="button" value="Load Values" class="button-cookie" style="width:97.5%; margin-top:3px;" onclick="recoverInputs(this.form,textFromFileLoaded,true);"><center>
+<center><input type="button" value="Load Values" class="button-cookie-load" style="width:97.5%; margin-top:3px;" onclick="recoverInputs(this.form,textFromFileLoaded,true);"><center>
 <!--<input type="button" value="load formdata to console" onclick="console.log(retrieveCookie('formdata'));">
 <input type="button" value="read file to console" onclick="console.log(textFromFileLoaded);">
 <input type="button" value="fullrecovertest" onclick="FullRecoverTask()">-->
@@ -1698,6 +1698,43 @@ button,
 [type="reset"],
 [type="submit"] {
   -webkit-appearance: button;
+}
+	
+.btn-file-upload-load{
+     width: 100%;
+     position:relative;
+ }
+
+.btn-file-upload-load:after{
+    content:  attr(value);
+    position: absolute;
+    top: 0;
+    left: 0;
+    bottom: 0;    
+    width: 100%;
+    background: rgba(255,255,255,1);
+    color: black;
+    border-radius: 2px;
+    text-align: center;
+    font-size: 12px;
+    line-height: 2;
+    cursor: pointer;
+ }
+	
+.button-cookie-load {
+  border: 0;
+  border-radius: 2px;
+  background:rgba(255,255,255,1);
+  color: black;
+  /*font-family: Calibri, Candara, Segoe;*/
+  font-size: 12px;
+  line-height: 1.2;
+  white-space: nowrap;
+  text-decoration: none;
+  padding: 15px 0px;
+  margin: 0;
+  cursor: pointer;
+  margin-top: 3px;
 }
 	
 .button-cookie {
