@@ -1430,22 +1430,22 @@
 <input type="button" value="load" onclick="recoverInputs(this.form,textFromFileLoaded,true);">
 <!--<input type="button" value="load formdata to console" onclick="console.log(retrieveCookie('formdata'));">
 <input type="button" value="read file to console" onclick="console.log(textFromFileLoaded);">-->
-<input type="button" value="fullrecovertest" onclick="FullRecoverTask(textFromFileLoaded)">
+<input type="button" value="fullrecovertest" onclick="FullRecoverTask()">
 </form>
 </div>
 	
 <script>
-function FullRecoverTask(textplease){
+function FullRecoverTask(){
 loadFileAsText();
-recoverInputs(this.form,textplease,true);
+recoverInputs(this.form,textFromFileLoaded,true);
 }
-	
+var textFromFileLoaded
 function loadFileAsText(){
   var fileToLoad = document.getElementById("fileToLoad").files[0];
 
   var fileReader = new FileReader();
   fileReader.onload = function(fileLoadedEvent){
-      window.textFromFileLoaded = fileLoadedEvent.target.result.replace(/%2C/g,",");
+      textFromFileLoaded = fileLoadedEvent.target.result.replace(/%2C/g,",");
       //document.getElementById("inputTextToSave").value = textFromFileLoaded;
   };
 	
@@ -1453,7 +1453,7 @@ function loadFileAsText(){
 }
 
 var inputs = document.getElementById("checklistform").elements;
-	
+
 function download(filename, text) {
   var filename= inputs["serialnumberdryer"].value;
 	//var text=retrieveCookie('formdata');
