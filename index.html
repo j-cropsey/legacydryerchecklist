@@ -1413,7 +1413,7 @@
 </center>
 -->
 
-<div id="noprint">
+<div class='noprint'>
 <center>
 <input type="reset"  class="button-cookie" style="width:32.3%" name="g">
 <input type="button" class="button-cookie" style="width:32.3%" value="Save" onclick="setCookie('formdata',getFormString(this.form,true), 1209600);">
@@ -1777,10 +1777,12 @@ input[type=checkbox]:checked
     background: /*rgba(21,84,131,1)*/black /*url("data:image/gif;base64,R0lGODlhCwAKAIABAP////3cnSH5BAEKAAEALAAAAAALAAoAAAIUjH+AC73WHIsw0UCjglraO20PNhYAOw==") 2.3px 2.3px no-repeat;*/
 }
 
-@media print {
-   .noprint {
-      visibility: hidden;
-   }
+@media print
+{    
+    .no-print, .no-print *
+    {
+        display: none !important;
+    }
 }
 	
 </style>
