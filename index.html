@@ -1457,7 +1457,7 @@ function loadFileAsText(){
   var fileReader = new FileReader();
   fileReader.onload = function(fileLoadedEvent){
       window.textFromFileLoaded = fileLoadedEvent.target.result;
-      document.getElementById("inputTextToSave").value = textFromFileLoaded;
+      document.getElementById("inputTextToSave") = textFromFileLoaded;
   };
 	
   fileReader.readAsText(fileToLoad, "UTF-8");
