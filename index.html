@@ -1412,10 +1412,6 @@
 <center><input type="file" id="flup" onchange="getfolder(event)" webkitdirectory mozdirectory msdirectory odirectory directory multiple /
 </center>
 -->
-<script>
-	//var stringfortest = document.getElementById('formdata').value;
-	var stringfortest = document.cookie;
-</script>
 
 <center>
 <input type="reset"  class="button-cookie" style="width:32.3%" name="g">
@@ -1439,7 +1435,7 @@ function FullRecoverTask(){
 loadFileAsText();
 recoverInputs(this.form,textFromFileLoaded,true);
 }
-var textFromFileLoaded
+	
 function loadFileAsText(){
   var fileToLoad = document.getElementById("fileToLoad").files[0];
 
