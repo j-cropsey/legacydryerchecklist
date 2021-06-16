@@ -1427,7 +1427,6 @@
 <center>
 <input type="file" id="fileToLoad" class="btn-file-upload" value="Load From File" style="width:97.5%; margin-top:3px;"></center>
 <input type="button" value="initiate file read" onclick="loadFileAsText()">
-<!--<textarea id="content-target"></textarea>-->
 <input type="button" value="load" onclick="recoverInputs(this.form,textFromFileLoaded,true);">
 <!--<input type="button" value="load formdata to console" onclick="console.log(retrieveCookie('formdata'));">
 <input type="button" value="read file to console" onclick="console.log(textFromFileLoaded);">-->
@@ -1435,21 +1434,6 @@
 </div>
 	
 <script>
-//var cookiefromfile = document.getElementById('content-target')
-//var stringtyped = ",e599,custom,4,,,,1,,1,1,,,,,,,,1,,1,,1,,,,,,,,,,,,1,,1,,,,,,,,1,,,1,,,1,,,,,,,,,,,,,,,,,,,,,,1,,,,1,,,1,,,,,,1,dff,,,,,,,,,,,,,,,1,,1,,,,,,,,,,,,,,,,,,,,,,,1,,1,1,1,,,,,,,,,,,,,,,,,,,,,,,,1,,1,,1,,,,1,,1,,1,,,,,,,,,,,,,,,,1,,,,1,,1,,1,,,,,,,,,,,,,,,,,1,,1,,,,,,,,,,,,,,,,,,,,,,,,,,1,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,1,1,,,,,,,,,,,,,,,1,,1,,,,sdfsf,,,,,,,,,,,,,,,,fdsfdsf,,,,,,sfds,,,,,,,1,,,1,,,,,,,,,1,,,,1,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,sddsfdfdffff,,,,";	
-	
-/*document.getElementById('input-file')
-const reader = new FileReader()
-reader.onload = event => console.log(event.target.result) // desired file content
-reader.onerror = error => reject(error)
-reader.readAsText(file)
-*/
-//function placestringtext(event){
-//const input = event.target
-//  if ('files' in input && input.files.length > 0) {
-//	  placeFileContent(document.getElementById('showsaved'),input.files[0])
-//  }
-//}
 	
 function loadFileAsText(){
   var fileToLoad = document.getElementById("fileToLoad").files[0];
@@ -1462,36 +1446,8 @@ function loadFileAsText(){
 	
   fileReader.readAsText(fileToLoad, "UTF-8");
 }
-/*
-document.getElementById('input-file')
-  .addEventListener('change', getFile) 
 
-function getFile(event) {
-	var datastring;
-	const input = event.target
-  if ('files' in input && input.files.length > 0) {
-	  placeFileContent(document.getElementById('content-target'),input.files[0])
-  }
-}
-
-function placeFileContent(target, file) {
-	readFileContent(file).then(content => {
-  	target.value = content
-  }).catch(error => console.log(error))
-}
-
-function readFileContent(file) {
-	const reader = new FileReader()
-  return new Promise((resolve, reject) => {
-    reader.onload = event => resolve(event.target.result)
-    reader.onerror = error => reject(error)
-    reader.readAsText(file)
-  })
-}	
-*/
 var inputs = document.getElementById("checklistform").elements;
-	
-//var textdownload= retrieveCookie('formdata');	
 	
 function download(filename, text) {
   var filename= inputs["serialnumberdryer"].value;
