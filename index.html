@@ -1486,7 +1486,7 @@ function download(filename, textdownload) {
  // var textbefore=document.cookie;
   //text= textbefore.split("=").pop();
   var element = document.createElement('a');
- element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textdownload));
+ element.setAttribute('href', 'data:text/plain;charset=utf-8,' + textdownload);
  element.setAttribute('download', filename);
   
   element.style.display = 'none';
