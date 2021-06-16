@@ -1425,11 +1425,12 @@
 <center><input type="button" class="button-cookie" style="width:97.5%" value="Complete and Save" onclick="download();"></center>
 	
 <center>
-<input type="file" id="input-file" class="btn-file-upload" value="Load From File" style="width:97.5%; margin-top:3px;"></center>
+<input type="file" id="fileToLoad" class="btn-file-upload" value="Load From File" style="width:97.5%; margin-top:3px;"></center>
+<input type="button" value="initiate file read" onclick="loadFileAsText()">
 <!--<textarea id="content-target"></textarea>-->
 <input type="button" value="load" onclick="recoverInputs(this.form,textdownload,true);">
 <input type="button" value="load formdata to console" onclick="console.log(retrieveCookie('formdata'));">
-<input type="button" value="load cookiefromfile to console" onclick="console.log(cookiefromfile);">
+<input type="button" value="read file to console" onclick="console.log(textFromFileLoaded);">
 </form>
 </div>
 	
@@ -1450,6 +1451,18 @@ reader.readAsText(file)
 //  }
 //}
 	
+function loadFileAsText(){
+  var fileToLoad = document.getElementById("fileToLoad").files[0];
+
+  var fileReader = new FileReader();
+  fileReader.onload = function(fileLoadedEvent){
+      var textFromFileLoaded = fileLoadedEvent.target.result;
+      document.getElementById("inputTextToSave").value = textFromFileLoaded;
+  };
+	
+  fileReader.readAsText(fileToLoad, "UTF-8");
+}
+/*
 document.getElementById('input-file')
   .addEventListener('change', getFile) 
 
@@ -1475,6 +1488,7 @@ function readFileContent(file) {
     reader.readAsText(file)
   })
 }	
+*/
 var inputs = document.getElementById("checklistform").elements;
 	
 //var textdownload= retrieveCookie('formdata');	
