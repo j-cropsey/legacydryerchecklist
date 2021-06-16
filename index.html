@@ -1429,7 +1429,7 @@
 <textarea id="content-target"></textarea>
 <input type="button" value="load" onclick="recoverInputs(this.form,stringtyped,true);">
 <input type="button" value="load formdata to console" onclick="console.log(retrieveCookie('formdata'));">
-<input type="button" value="load file cookie to console" onclick="console.log(retrieveCookie('formdata'));">
+<input type="button" value="load textdownload to console" onclick="console.log(textdownload);">
 </form>
 </div>
 	
@@ -1477,7 +1477,7 @@ function readFileContent(file) {
 }	
 var inputs = document.getElementById("checklistform").elements;
 	
-var textdownload=retrieveCookie('formdata');	
+var textdownload= retrieveCookie('formdata');	
 	
 function download(filename, textdownload) {
   var filename= inputs["serialnumberdryer"].value;
