@@ -1418,7 +1418,9 @@
 <input type="button" class="button-cookie" style="width:32.3%" value="Save" onclick="setCookie('formdata',getFormString(this.form,true), 1209600);">
 <input type="button" class="button-cookie" style="width:32.3%" value="Recover" onclick="recoverInputs(this.form,retrieveCookie('formdata'),true);">
 </center>
+	
 <center><input type="button" class="button-cookie" style="width:97.5%" value="Submit Quality Checklist" onclick="download();"></center>
+	<hr>
 <center><input type="file" id="fileToLoad" class="btn-file-upload-load" value="Load Checklist From File" style="width:97.5%; margin-top: 3px; margin-left:0%;" onchange="loadFileAsText()";></center>
 <!--<input type="button" value="initiate file read" onclick="loadFileAsText()">-->
 <center><input type="button" value="Load Values" class="button-cookie-load" style="width:97.5%" onclick="recoverInputs(this.form,textFromFileLoaded,true);"><center>
