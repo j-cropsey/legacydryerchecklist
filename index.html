@@ -1427,13 +1427,15 @@
 <center>
 <input type="file" id="input-file" class="btn-file-upload" value="Load Form" style="width:97.5%; margin-top:3px;"></center>
 <textarea id="content-target"></textarea>
-<input type="button" value="load" onclick="recoverInputs(this.form,retrieveCookie('stringfortest'),true);">
+<input type="button" value="load" onclick="recoverInputs(this.form,stringtyped,true);">
 <input type="button" value="load" onclick="console.log(retrieveCookie('formdata'));">
 </form>
 </div>
 	
 <script>
 
+var stringtyped = ",e599,custom,4,,,,1,,1,1,,,,,,,,1,,1,,1,,,,,,,,,,,,1,,1,,,,,,,,1,,,1,,,1,,,,,,,,,,,,,,,,,,,,,,1,,,,1,,,1,,,,,,1,dff,,,,,,,,,,,,,,,1,,1,,,,,,,,,,,,,,,,,,,,,,,1,,1,1,1,,,,,,,,,,,,,,,,,,,,,,,,1,,1,,1,,,,1,,1,,1,,,,,,,,,,,,,,,,1,,,,1,,1,,1,,,,,,,,,,,,,,,,,1,,1,,,,,,,,,,,,,,,,,,,,,,,,,,1,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,,1,1,1,,,,,,,,,,,,,,,1,,1,,,,sdfsf,,,,,,,,,,,,,,,,fdsfdsf,,,,,,sfds,,,,,,,1,,,1,,,,,,,,,1,,,,1,,,,,1,,,,,,,,,,,,,,,,,,,,,,,,,,,sddsfdfdffff,,,,";	
+	
 /*document.getElementById('input-file')
 const reader = new FileReader()
 reader.onload = event => console.log(event.target.result) // desired file content
