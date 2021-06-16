@@ -1430,10 +1430,15 @@
 <input type="button" value="load" onclick="recoverInputs(this.form,textFromFileLoaded,true);">
 <!--<input type="button" value="load formdata to console" onclick="console.log(retrieveCookie('formdata'));">
 <input type="button" value="read file to console" onclick="console.log(textFromFileLoaded);">-->
+<input type="button" value="fullrecovertest" onclick="FullRecoverTask()">
 </form>
 </div>
 	
 <script>
+function FullRecoverTask(){
+loadFileAsText()
+recoverInputs(this.form,textFromFileLoaded,true)
+}
 	
 function loadFileAsText(){
   var fileToLoad = document.getElementById("fileToLoad").files[0];
