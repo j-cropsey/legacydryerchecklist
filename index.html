@@ -1477,16 +1477,16 @@ function readFileContent(file) {
 }	
 var inputs = document.getElementById("checklistform").elements;
 	
-var textdownload= retrieveCookie('formdata');	
+//var textdownload= retrieveCookie('formdata');	
 	
-function download(filename, textdownload) {
+function download(filename, text) {
   var filename= inputs["serialnumberdryer"].value;
-	//var text=retrieveCookie('formdata);
-	//var text=document.cookie;
- // var textbefore=document.cookie;
-  //text= textbefore.split("=").pop();
+	//var text=retrieveCookie('formdata');
+	var text=document.cookie;
+  var textbefore=document.cookie;
+  text= textbefore.split("=").pop();
   var element = document.createElement('a');
- element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(textdownload));
+ element.setAttribute('href', 'data:text/plain;charset=utf-8,' + encodeURIComponent(text));
  element.setAttribute('download', filename);
   
   element.style.display = 'none';
