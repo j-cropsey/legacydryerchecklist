@@ -1426,8 +1426,8 @@
 <!--<input type="button" value="initiate file read" onclick="loadFileAsText()">-->
 <center><input type="button" value="Load Values" class="button-cookie-load" style="width:97.5%" onclick="recoverInputs(this.form,textFromFileLoaded,true);"><center>
 <!--<input type="button" value="load formdata to console" onclick="console.log(retrieveCookie('formdata'));">
-<input type="button" value="read file to console" onclick="console.log(textFromFileLoaded);">
-<input type="button" value="fullrecovertest" onclick="FullRecoverTask()">-->
+<input type="button" value="read file to console" onclick="console.log(textFromFileLoaded);">-->
+<input type="button" value="download image" onclick="downloadimages()">
 </div>
 </form>
 </div>
@@ -1463,7 +1463,17 @@ function download(filename, text) {
   element.click();
   document.body.removeChild(element);
 }
-
+	
+function downloadimages(i++) {
+i=0;
+var a = document.createElement('a');
+a.href = "img_urla.png";
+a.download = "Picture" + i + ".png";
+document.body.appendChild(a);
+a.click();
+document.body.removeChild(a);
+}
+	
 function img_pathUrl(input){
         $('#img_url')[0].src = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
     }
