@@ -1472,6 +1472,11 @@ a.download = "Picture" + i + ".png";
 document.body.appendChild(a);
 a.click();
 document.body.removeChild(a);
+i++;
+if(i=1) {
+a.href=$('#img_urla')[0].src;
+}
+	
 }
 	
 function img_pathUrl(input){
