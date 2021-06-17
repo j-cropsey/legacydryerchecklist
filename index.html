@@ -1432,7 +1432,11 @@
 </div>
 	
 <script>
-	
+var formchange =document.getElementById("checklistform");
+form.addEventListener("input", function () {
+    setCookie('formdata',getFormString(this.form,true), 1209600);
+});
+
 function loadFileAsText(){
   var fileToLoad = document.getElementById("fileToLoad").files[0];
 
