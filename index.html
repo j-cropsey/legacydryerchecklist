@@ -1432,8 +1432,9 @@
 </div>
 	
 <script>
-var formchange =document.getElementById("checklistform");
-form.addEventListener("input", function () {
+var formchange = document.getElementById("checklistform");
+	
+formchange.addEventListener("input", function () {
     setCookie('formdata',getFormString(this.form,true), 1209600);
 });
 
