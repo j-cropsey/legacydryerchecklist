@@ -1394,25 +1394,6 @@
 &nbsp<input type="file" id="img_fileg" class="btn-file-upload" value="Defect 4" style="width: 19%" onChange="img_pathUrlg(this);">
 &nbsp<input type="file" id="img_fileh" class="btn-file-upload" value="Defect 5" style="width: 19%" onChange="img_pathUrlh(this);"></center>
 
-<!--
-<hr>
-<b> Gallery Photo Upload </b>
-<hr>
-
-<script type="text/javascript">
-  function getfolder(e) {
-    var files = e.target.files;
-    var path = files[0].webkitRelativePath;
-    var Folder = path.split("/");
-    alert(Folder[0]);
-  }
--->
-</script>
-<!--
-<center><input type="file" id="flup" onchange="getfolder(event)" webkitdirectory mozdirectory msdirectory odirectory directory multiple /
-</center>
--->
-
 <div class="noPrint">
 <center>
 <input type="reset"  class="button-cookie" style="width:32.3%" name="g">
@@ -1432,11 +1413,12 @@
 </div>
 	
 <script>
-var formchange = document.getElementById("checklistform");
+/*var formchange = document.getElementById("checklistform");
 	
 formchange.addEventListener("input", function () {
     setCookie('formdata',getFormString(this.form,true), 1209600);
 });
+*/
 
 function loadFileAsText(){
   var fileToLoad = document.getElementById("fileToLoad").files[0];
