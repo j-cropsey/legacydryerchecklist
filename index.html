@@ -1468,15 +1468,15 @@ function downloadimages(i=0) {
   while(i < 9) {
     var picturenumber = i+1;
     var a = document.createElement('a');
-    if(i==0 && document.getElementById("img_file").value != "") {a.href=$('#img_url')[0].src;  a.download = "Picture 1.png";}
-    if(i==1 && document.getElementById("img_filea") {a.href=$('#img_urla')[0].src; a.download = "Picture 2.png";}
-    if(i==2 && document.getElementById("img_fileb") {a.href=$('#img_urlb')[0].src; a.download = "Picture 3.png";}
-    if(i==3 && document.getElementById("img_filec") {a.href=$('#img_urlc')[0].src; a.download = "Picture 4.png";}
-    if(i==4 && document.getElementById("img_filed") {a.href=$('#img_urld')[0].src; a.download = "Defect 1.png";}
-    if(i==5 && document.getElementById("img_filee") {a.href=$('#img_urle')[0].src; a.download = "Defect 2.png";}
-    if(i==6 && document.getElementById("img_filef") {a.href=$('#img_urlf')[0].src; a.download = "Defect 3.png";}
-    if(i==7 && document.getElementById("img_fileg") {a.href=$('#img_urlg')[0].src; a.download = "Defect 4.png";}
-    if(i==8 && document.getElementById("img_fileh") {a.href=$('#img_urlh')[0].src; a.download = "Defect 5.png";}
+    if(i==0 && document.getElementById("img_file").value != "")  {a.href=$('#img_url')[0].src;  a.download = "Picture 1.png";}
+    if(i==1 && document.getElementById("img_filea").value != "") {a.href=$('#img_urla')[0].src; a.download = "Picture 2.png";}
+    if(i==2 && document.getElementById("img_fileb").value != "") {a.href=$('#img_urlb')[0].src; a.download = "Picture 3.png";}
+    if(i==3 && document.getElementById("img_filec").value != "") {a.href=$('#img_urlc')[0].src; a.download = "Picture 4.png";}
+    if(i==4 && document.getElementById("img_filed").value != "") {a.href=$('#img_urld')[0].src; a.download = "Defect 1.png";}
+    if(i==5 && document.getElementById("img_filee").value != "") {a.href=$('#img_urle')[0].src; a.download = "Defect 2.png";}
+    if(i==6 && document.getElementById("img_filef").value != "") {a.href=$('#img_urlf')[0].src; a.download = "Defect 3.png";}
+    if(i==7 && document.getElementById("img_fileg").value != "") {a.href=$('#img_urlg')[0].src; a.download = "Defect 4.png";}
+    if(i==8 && document.getElementById("img_fileh").value != "") {a.href=$('#img_urlh')[0].src; a.download = "Defect 5.png";}
     //a.download = "Picture" + picturenumber + ".png";
     document.body.appendChild(a);
     a.click();
