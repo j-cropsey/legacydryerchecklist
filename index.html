@@ -1366,10 +1366,12 @@
 <img src="" id="img_urlb" >&nbsp
 <img src="" id="img_urlc" ></center>
 
-<center><input type="file" id="img_file" style="width: 24.0%" class="btn-file-upload" value="Picture 1" onChange="img_pathUrl(this);">
+<center>
+<input type="file" id="img_file" style="width: 24.0%" class="btn-file-upload" value="Picture 1" onChange="img_pathUrl(this);">
 &nbsp<input type="file" id="img_filea" style="width: 24.0%" class="btn-file-upload" value="Picture 2" onChange="img_pathUrla(this);">
 &nbsp<input type="file" id="img_fileb" style="width: 24.0%" class="btn-file-upload" value="Picture 3" onChange="img_pathUrlb(this);">
-&nbsp<input type="file" id="img_filec" style="width: 24.0%" class="btn-file-upload" value="Picture 4" onChange="img_pathUrlc(this);"></center>
+&nbsp<input type="file" id="img_filec" style="width: 24.0%" class="btn-file-upload" value="Picture 4" onChange="img_pathUrlc(this);">
+</center>
 <br>
 
 <hr>
@@ -1413,12 +1415,13 @@
 </div>
 	
 <script>
-/*var formchange = document.getElementById("checklistform");
+var formchange = document.getElementById("checklistform");
 	
 formchange.addEventListener("input", function () {
-    setCookie('formdata',getFormString(this.form,true), 1209600);
+	console.log("form has changed");
+    //setCookie('formdata',getFormString(this.form,true), 1209600);
 });
-*/
+
 
 function loadFileAsText(){
   var fileToLoad = document.getElementById("fileToLoad").files[0];
