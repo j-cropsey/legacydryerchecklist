@@ -1423,7 +1423,6 @@
 <center><input type="button" class="button-cookie" style="width:97.5%" value="Submit Quality Checklist" onclick="download();"></center>
 
 <center><input type="file" id="fileToLoad" class="btn-file-upload-load" value="Select Quality Form From File" style="width:97.5%; margin-top: 3px;" onchange="loadFileAsText()";></center>
-<!--<input type="button" value="initiate file read" onclick="loadFileAsText()">-->
 <center><input type="button" value="Load Values" class="button-cookie-load" style="width:97.5%" onclick="recoverInputs(this.form,textFromFileLoaded,true);"><center>
 <!--<input type="button" value="load formdata to console" onclick="console.log(retrieveCookie('formdata'));">
 <input type="button" value="read file to console" onclick="console.log(textFromFileLoaded);">-->
@@ -1481,9 +1480,9 @@ function downloadimages(i=0) {
     a.click();
     document.body.removeChild(a);
     i++;
-    }
-	
   }
+	
+}
 	
 function img_pathUrl(input){
         $('#img_url')[0].src = (window.URL ? URL : webkitURL).createObjectURL(input.files[0]);
