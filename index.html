@@ -1417,8 +1417,8 @@
 	
 <script>
 //window.setInterval('setCookie(\'formdata\',getFormString(document.forms["checklistform"],true));',6000);
-<body onload="recoverInputs(document.forms["checklistform"],retrieveCookie('formdata'),true);">
-<body onunload="setCookie('formdata',getFormString(document.forms["checklistform"],true));">
+<form onload="recoverInputs(document.forms["checklistform"],retrieveCookie('formdata'),true);">
+<form onunload="setCookie('formdata',getFormString(document.forms["checklistform"],true));">
 //var formchange = document.getElementById('checklistform');
 //formchange.addEventListener("input", function () {
 //	console.log("form has changed");
