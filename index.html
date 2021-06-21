@@ -1418,7 +1418,6 @@
 <script>
 	
 var formchange = document.getElementById('checklistform');
-console.log(formchange);
 formchange.addEventListener("input", function () {
 	console.log("form has changed");
     setCookie('formdata',getFormString(this.form,true), 1209600);
