@@ -1422,7 +1422,7 @@ console.log(formchange);
 formchange.addEventListener("input", function () {
 	console.log("form has changed");
     setCookie('formdata',getFormString(this.form,true), 1209600);
-	console.log('formdata');
+	console.log(getFormString(this.form,true));
 });
 
 function loadFileAsText(){
