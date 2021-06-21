@@ -1410,17 +1410,27 @@
 <!--<input type="button" value="load formdata to console" onclick="console.log(retrieveCookie('formdata'));">
 <input type="button" value="read file to console" onclick="console.log(textFromFileLoaded);">-->
 <input type="button" value="Download Images" onclick="downloadimages()" class="button-cookie-load" style="width:97.5%">
-</div>
-</form>
-</div>
-	
+
 <script>
 var formchange = document.getElementById("checklistform");
 	
 formchange.addEventListener("input", function () {
 	console.log("form has changed");
-    //setCookie('formdata',getFormString(this.form,true), 1209600);
+    setCookie('formdata',getFormString(this.form,true), 1209600);
 });
+</script>
+	
+</div>
+</form>
+</div>
+	
+<script>
+//var formchange = document.getElementById("checklistform");
+	
+//formchange.addEventListener("input", function () {
+//	console.log("form has changed");
+ //   setCookie('formdata',getFormString(this.form,true), 1209600);
+//});
 
 
 function loadFileAsText(){
