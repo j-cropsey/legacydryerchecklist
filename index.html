@@ -1407,22 +1407,13 @@
 
 <center><input type="file" id="fileToLoad" class="btn-file-upload-load" value="Select Quality Form From File" style="width:97.5%; margin-top: 3px;" onchange="loadFileAsText()";></center>
 <center><input type="button" value="Load Values" class="button-cookie-load" style="width:97.5%" onclick="recoverInputs(this.form,textFromFileLoaded,true);"><center>
-<!--<input type="button" value="load formdata to console" onclick="console.log(retrieveCookie('formdata'));">
-<input type="button" value="read file to console" onclick="console.log(textFromFileLoaded);">-->
-<input type="button" value="Download Images" onclick="downloadimages()" class="button-cookie-load" style="width:97.5%">
+<!--<input type="button" value="Download Images" onclick="downloadimages()" class="button-cookie-load" style="width:97.5%"> button to download the photos uploaded-->
 
 </div>
 </form>
 </div>
 	
 <script>
-//window.setInterval('setCookie(\'formdata\',getFormString(document.forms["checklistform"],true));',6000);
-//var formchange = document.getElementById('checklistform');
-//formchange.addEventListener("input", function () {
-//	console.log("form has changed");
-//    setCookie('formdata',getFormString(this.form,true), 1209600);
-//	console.log(getFormString(this.form,true));
-//});
 
 function loadFileAsText(){
   var fileToLoad = document.getElementById("fileToLoad").files[0];
