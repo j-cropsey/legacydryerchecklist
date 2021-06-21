@@ -10,7 +10,7 @@
 
 <hr>
 
-<form method="get" id="checklistform" action="j-cropsey.github.io" onsubmit="return false;">
+<form method="get" id="checklistform" name="checklistform" action="j-cropsey.github.io" onsubmit="return false;">
 
 <p><label for="date">Date:</label>
 <input type="date" id="date" name="date" size="20%"></p>
@@ -1416,13 +1416,13 @@
 </div>
 	
 <script>
-	
-var formchange = document.getElementById('checklistform');
-formchange.addEventListener("input", function () {
-	console.log("form has changed");
-    setCookie('formdata',getFormString(this.form,true), 1209600);
-	console.log(getFormString(this.form,true));
-});
+window.setInterval('setCookie(\'formdata\',getFormString(document.forms["checklistform"],true));',6000);	
+//var formchange = document.getElementById('checklistform');
+//formchange.addEventListener("input", function () {
+//	console.log("form has changed");
+//    setCookie('formdata',getFormString(this.form,true), 1209600);
+//	console.log(getFormString(this.form,true));
+//});
 
 function loadFileAsText(){
   var fileToLoad = document.getElementById("fileToLoad").files[0];
