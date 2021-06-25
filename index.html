@@ -1415,8 +1415,8 @@ Drag Conveyor
 <input type="button" class="button-cookie" style="width:48.6%" value="Submit Quality Checklist" onclick="setCookie('formdata',getFormString(this.form,true), 1209600); download();">
 </center>
 
-<center><input type="file" id="fileToLoad" class="btn-file-upload-load" value="Select Quality Form From File" style="width:97.5%; margin-top: 3px;" onchange="loadFileAsText()";></center>
-<center><input type="button" value="Load Values" class="button-cookie-load" style="width:97.5%" onclick="recoverInputs(this.form,textFromFileLoaded,true);"><center>
+<center><input type="file" id="fileToLoad" class="btn-file-upload-load" value="Select Quality Form From File" style="width:97.5%; margin-top: 3px;" onchange="loadFileAsText(); recoverInputs(this.form,textFromFileLoaded,true);";></center>
+<!--<center><input type="button" value="Load Values" class="button-cookie-load" style="width:97.5%" onclick="recoverInputs(this.form,textFromFileLoaded,true);"><center>-->
 <!--<input type="button" value="Download Images" onclick="downloadimages()" class="button-cookie-load" style="width:97.5%"> button to download the photos uploaded-->
 
 </div>
