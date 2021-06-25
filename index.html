@@ -1431,7 +1431,6 @@ function loadFileAsText(){
   var fileReader = new FileReader();
   fileReader.onload = function(fileLoadedEvent){
       window.textFromFileLoaded = fileLoadedEvent.target.result.replace(/%2C/g,",");
-      //document.getElementById("inputTextToSave").value = textFromFileLoaded;
 	  
   };
 	
