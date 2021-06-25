@@ -1432,6 +1432,8 @@ function loadFileAsText(){
   fileReader.onload = function(fileLoadedEvent){
       window.textFromFileLoaded = fileLoadedEvent.target.result.replace(/%2C/g,",");
       //document.getElementById("inputTextToSave").value = textFromFileLoaded;
+ 
+  recoverInputs(this.form,textFromFileLoaded,true);
   };
 	
   fileReader.readAsText(fileToLoad, "UTF-8");
